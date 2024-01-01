@@ -6,6 +6,7 @@ heads = 0
 tails = 0
 correct = 0
 incorrect = 0
+percentage = 0
 
 while True:
     if wouldyouliketoplay == "y":
@@ -22,8 +23,10 @@ while True:
         else:
             print("You got it incorrect")
             incorrect += 1
+        percentage = str(100*(correct/turns))
         print(f"You have played {turns} turns")
         print(f"Amount of times chosen heads: {heads}")
         print(f"Amount of times chosen tails: {tails}")
         print(f"You have guessed correctly {correct} time/times")
         print(f"You have guessed incorrect {incorrect} time/times")
+        print(f"Your overal winning percentage is {str(percentage)}")
